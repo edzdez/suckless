@@ -2,5 +2,5 @@
 
 dte=$(date +"%D")
 
-echo " $dte "
+echo " $dte"
 

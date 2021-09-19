@@ -2,5 +2,5 @@
 
 time=$(date +"%H:%M")
 
-echo " $time "
+echo " $time"
 
