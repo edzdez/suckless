@@ -231,8 +231,10 @@ static const char *rofipowercmd[] = {"rofi", "-show", "power-menu", "-modi", "po
 
 static Key keys[] = {
     /* modifier                     key            function                argument */
-    {MODKEY, XK_d, spawn, {.v = roficmd}},
-    {MODKEY | Mod1Mask, XK_d, spawn, {.v = dmenucmd}},
+    /* {MODKEY, XK_d, spawn, {.v = roficmd}}, */
+    {MODKEY, XK_d, spawn, {.v = dmenucmd}},
+    /* {MODKEY | Mod1Mask, XK_d, spawn, {.v = dmenucmd}}, */
+    {MODKEY | Mod1Mask, XK_d, spawn, {.v = roficmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_f, spawn, {.v = filecmd}},
     {MODKEY, XK_b, spawn, {.v = webcmd}},
