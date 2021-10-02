@@ -212,7 +212,7 @@ static const Layout layouts[] = {
 /*                                  normfgcolor, "-sb", selbgcolor, "-sf", tagsselfgcolor,  topbar ? NULL : "-b", */
 /*                                  NULL}; */
 /* static const char *dmenucmd[] = {"dmenu_run", "-X", "6" , "-Y", "6", "-W", "1908", NULL}; */
-static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W 1908", "-term=alacritty", NULL};
+static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W 1908", "-term=alacritty", "--no-generic", NULL};
 static const char *termcmd[] = {"alacritty", NULL};
 static const char *filecmd[] = {"nemo", NULL};
 static const char *webcmd[] = {"firefox", NULL};
