@@ -1,4 +1,4 @@
 #!/bin/bash
 
-brightlight -d 960
+brightnessctl s 5%-
 pkill -RTMIN+1 dwmblocks
