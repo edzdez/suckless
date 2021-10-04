@@ -12,8 +12,8 @@ else
     elif [ "$cap" -ge 50 ]; then
         echo "  $cap% "
     elif [ "$cap" -ge 25 ]; then
-        echo "^c#ebcb8b^  $cap% "
+        echo "^c#d08770^  $cap% "
     elif [ "$cap" -ge 0  ]; then
-        echo "^c#d08770^  $cap% "
+        echo "^c#4c566a^  $cap% "
     fi
 fi

@@ -213,7 +213,8 @@ static const Layout layouts[] = {
 /*                                  NULL}; */
 /* static const char *dmenucmd[] = {"dmenu_run", "-X", "6" , "-Y", "6", "-W", "1908", NULL}; */
 static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W 1908", "-term=alacritty", "--no-generic", NULL};
-static const char *termcmd[] = {"alacritty", NULL};
+// static const char *termcmd[] = {"alacritty", NULL};
+static const char *termcmd[] = {"kitty", NULL};
 static const char *filecmd[] = {"nemo", NULL};
 static const char *webcmd[] = {"firefox", NULL};
 
@@ -227,7 +228,7 @@ static const char *speakerdowncmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scr
 static const char *micmutecmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/mutemic.sh", NULL};
 static const char *screenshotcmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/sshot.sh", NULL};
 static const char *changekeyboardcmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/switchkb.sh", NULL};
-static const char *rofipowercmd[] = {"rofi", "-show", "power-menu", "-modi", "power-menu:rofi-power-menu"};
+static const char *rofipowercmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/rofi-power.sh", NULL};
 
 static Key keys[] = {
     /* modifier                     key            function                argument */
