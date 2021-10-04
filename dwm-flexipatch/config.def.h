@@ -25,8 +25,11 @@ static const int showsystray = 1;             /* 0 means no systray */
 static int tagindicatortype = INDICATOR_TOP_LEFT_SQUARE;
 static int tiledindicatortype = INDICATOR_NONE;
 static int floatindicatortype = INDICATOR_TOP_LEFT_SQUARE;
-static const char *fonts[] = {"JetBrains Mono Nerd Font:size=11"};
-static const char dmenufont[] = "JetBrains Mono Nerd Font:size=11";
+static const char *fonts[] = {
+	"JetBrains Mono Nerd Font:size=11",
+	"Font Awesome 5 Free Regular:size=12"
+};
+static const char dmenufont[] = "JetBrains Mono Nerd Font Mono:size=11";
 
 static char c000000[] = "#2e3440"; // placeholder value
 
