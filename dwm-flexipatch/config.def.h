@@ -3,6 +3,7 @@
 /* appearance */
 static const unsigned int borderpx = 2; /* border pixel of windows */
 static const unsigned int snap = 32;    /* snap pixel */
+static const int swallowfloating = 0;   /* 1 means swallow floating windows by default */
 static const unsigned int gappih = 6;   /* horiz inner gap between windows */
 static const unsigned int gappiv = 6;   /* vert inner gap between windows */
 static const unsigned int gappoh = 6;   /* horiz outer gap between windows and screen edge */
@@ -17,18 +18,15 @@ static const int topbar = 1;                  /* 0 means bottom bar */
 static const int bar_height = 0;              /* 0 means derive from font, >= 1 explicit height */
 static const int vertpad = 6;                 /* vertical padding of bar */
 static const int sidepad = 6;                 /* horizontal padding of bar */
-static const int horizpadbar = 0;   /* horizontal padding for statusbar */
-static const int vertpadbar = 0;   /* vertical padding for statusbar */
+static const int horizpadbar = 0;             /* horizontal padding for statusbar */
+static const int vertpadbar = 0;              /* vertical padding for statusbar */
 static const unsigned int systrayspacing = 2; /* systray spacing */
 static const int showsystray = 1;             /* 0 means no systray */
 /* Indicators: see patch/bar_indicators.h for options */
 static int tagindicatortype = INDICATOR_TOP_LEFT_SQUARE;
 static int tiledindicatortype = INDICATOR_NONE;
 static int floatindicatortype = INDICATOR_TOP_LEFT_SQUARE;
-static const char *fonts[] = {
-	"JetBrains Mono Nerd Font:size=11",
-	"Font Awesome 5 Free Regular:size=12"
-};
+static const char *fonts[] = {"JetBrains Mono Nerd Font:size=11", "Font Awesome 5 Free Regular:size=12"};
 static const char dmenufont[] = "JetBrains Mono Nerd Font Mono:size=11";
 
 static char c000000[] = "#2e3440"; // placeholder value
@@ -158,7 +156,7 @@ static const Rule rules[] = {
      */
     RULE(.wintype = WTYPE "DIALOG", .isfloating = 1) RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
         RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1) RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-            RULE(.class = "Gimp", .tags = 1 << 4)};
+            RULE(.class = "Gimp", .tags = 1 << 4) RULE(.class = "Alacritty", .isterminal = 1)};
 
 /* Bar rules allow you to configure what is shown where on the bar, as well as
  * introducing your own bar modules.
@@ -215,7 +213,8 @@ static const Layout layouts[] = {
 /*                                  normfgcolor, "-sb", selbgcolor, "-sf", tagsselfgcolor,  topbar ? NULL : "-b", */
 /*                                  NULL}; */
 /* static const char *dmenucmd[] = {"dmenu_run", "-X", "6" , "-Y", "6", "-W", "1908", NULL}; */
-static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W 1908", "-term=alacritty", "--no-generic", NULL};
+static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W 1908", "-term=alacritty",
+                                 "--no-generic", NULL};
 static const char *termcmd[] = {"alacritty", NULL};
 // static const char *termcmd[] = {"kitty", NULL};
 static const char *filecmd[] = {"nemo", NULL};
