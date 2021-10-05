@@ -188,8 +188,7 @@ static const Layout layouts[] = {
     /* symbol     arrange function */
     {"[]=", tile}, /* first entry is default */
     {"><>", NULL}, /* no layout function means floating behavior */
-    {"[M]", monocle},
-    {"|M|", centeredmaster},
+    {"[M]", monocle}, {"|M|", centeredmaster}, {NULL, NULL},
 };
 
 /* key definitions */
@@ -271,6 +270,8 @@ static Key keys[] = {
     {MODKEY | Mod1Mask, XK_f, setlayout, {.v = &layouts[1]}},
     {MODKEY | Mod1Mask, XK_m, setlayout, {.v = &layouts[2]}},
     {MODKEY | Mod1Mask, XK_c, setlayout, {.v = &layouts[3]}},
+    {MODKEY | Mod1Mask, XK_Tab, cyclelayout, {.i = +1}},
+    {MODKEY | Mod1Mask | ShiftMask, XK_Tab, cyclelayout, {.i = -1}},
     {MODKEY | Mod1Mask, XK_space, setlayout, {0}},
     {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
     {MODKEY, XK_0, view, {.ui = ~0}},
