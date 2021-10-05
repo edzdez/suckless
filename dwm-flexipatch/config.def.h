@@ -229,7 +229,8 @@ static const char *speakerdowncmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scr
 static const char *micmutecmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/mutemic.sh", NULL};
 static const char *screenshotcmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/sshot.sh", NULL};
 static const char *changekeyboardcmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/switchkb.sh", NULL};
-static const char *rofipowercmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/rofi-power.sh", NULL};
+// static const char *rofipowercmd[] = {"/home/edzdez/suckless/dwm-flexipatch/scripts/rofi-power.sh", NULL};
+static const char *arcologoutcmd[] = {"arcolinux-logout", NULL};
 
 static Key keys[] = {
     /* modifier                     key            function                argument */
@@ -240,7 +241,8 @@ static Key keys[] = {
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
     {MODKEY, XK_f, spawn, {.v = filecmd}},
     {MODKEY, XK_b, spawn, {.v = webcmd}},
-    {MODKEY, XK_i, spawn, {.v = rofipowercmd}},
+    /* {MODKEY, XK_i, spawn, {.v = rofipowercmd}}, */
+    {MODKEY, XK_i, spawn, {.v = arcologoutcmd}},
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
