@@ -1,11 +1,11 @@
 // Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
-    {"^b#4c566a^  ", "/home/edzdez/suckless/dwmblocks/scripts/cpu.sh", 10, 0},
-    {"^c#2e3440^^b#bf616a^  ", "/home/edzdez/suckless/dwmblocks/scripts/mem.sh", 10, 0},
-    {"^c#2e3440^^b#d08770^ ", "/home/edzdez/suckless/dwmblocks/scripts/network.sh", 60, 0},
-    {"^c#2e3440^^b#ebcb8b^ ", "/home/edzdez/suckless/dwmblocks/scripts/getbl.sh", 5, 1},
-    {"^c#2e3440^^b#a3be8c^ ", "/home/edzdez/suckless/dwmblocks/scripts/getvol.sh", 5, 2},
+    {"^c#2e3440^^b#bf616a^  ", "/home/edzdez/suckless/dwmblocks/scripts/cpu.sh", 10, 0},
+    {"^c#2e3440^^b#d08770^  ", "/home/edzdez/suckless/dwmblocks/scripts/mem.sh", 10, 0},
+    {"^c#2e3440^^b#ebcb8b^ ", "/home/edzdez/suckless/dwmblocks/scripts/network.sh", 60, 0},
+    {"^c#2e3440^^b#a3be8c^ ", "/home/edzdez/suckless/dwmblocks/scripts/getbl.sh", 5, 1},
+    {"^c#2e3440^^b#6fa9a8^ ", "/home/edzdez/suckless/dwmblocks/scripts/getvol.sh", 5, 2},
     {"^c#2e3440^^b#88c0d0^ ", "/home/edzdez/suckless/dwmblocks/scripts/getbatt.sh", 15, 0},
     {"^c#2e3440^^b#81a1c1^ ", "/home/edzdez/suckless/dwmblocks/scripts/date.sh", 360, 0},
     {"^c#2e3440^^b#848ead^ ", "/home/edzdez/suckless/dwmblocks/scripts/time.sh", 10, 0},

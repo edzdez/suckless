@@ -1,16 +1,16 @@
 // Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
-    {"^c#88c0d0^ ", "/home/edzdez/dwmblocks/scripts/cpu.sh", 10, 0},
-    {"^c#88c0d0^ ", "free -h | grep Mem | awk '{print $3}'", 10, 0},
-    {"^c#88c0d0^", "/home/edzdez/dwmblocks/scripts/network.sh", 60, 0},
-    {"^c#88c0d0^", "/home/edzdez/dwmblocks/scripts/getbl.sh", 5, 1},
-    {"^c#88c0d0^", "/home/edzdez/dwmblocks/scripts/getvol.sh", 5, 2},
-    {"^c#88c0d0^", "/home/edzdez/dwmblocks/scripts/getbatt.sh", 15, 0},
-    {"^c#88c0d0^", "/home/edzdez/dwmblocks/scripts/date.sh", 360, 0},
-    {"^c#88c0d0^", "/home/edzdez/dwmblocks/scripts/time.sh", 10, 0},
+    {"^c#2e3440^^b#afcfce^  ", "/home/edzdez/suckless/dwmblocks/scripts/cpu.sh", 10, 0},
+    {"^c#2e3440^^b#9fc6c5^  ", "/home/edzdez/suckless/dwmblocks/scripts/mem.sh", 10, 0},
+    {"^c#2e3440^^b#9fcfce^ ", "/home/edzdez/suckless/dwmblocks/scripts/network.sh", 60, 0},
+    {"^c#2e3440^^b#8fbcbb^ ", "/home/edzdez/suckless/dwmblocks/scripts/getbl.sh", 5, 1},
+    {"^c#2e3440^^b#7fb2b1^ ", "/home/edzdez/suckless/dwmblocks/scripts/getvol.sh", 5, 2},
+    {"^c#2e3440^^b#88c0d0^ ", "/home/edzdez/suckless/dwmblocks/scripts/getbatt.sh", 15, 0},
+    {"^c#2e3440^^b#81a1c1^ ", "/home/edzdez/suckless/dwmblocks/scripts/date.sh", 360, 0},
+    {"^c#2e3440^^b#848ead^ ", "/home/edzdez/suckless/dwmblocks/scripts/time.sh", 10, 0},
 };
 
 // sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char delim[] = "^d^ | ";
-static unsigned int delimLen = 8;
+static char delim[] = "^d^";
+static unsigned int delimLen = 5;
