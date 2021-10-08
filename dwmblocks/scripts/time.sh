@@ -1,6 +1,6 @@
 #!/bin/bash
 
-time=$(date +"%H:%M")
+time=$(date +"%I:%M %p")
 
 echo " $time "
 

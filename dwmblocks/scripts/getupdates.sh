@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "$(checkupdates | wc -l) "
+echo "$(checkupdates | wc -l) updates "

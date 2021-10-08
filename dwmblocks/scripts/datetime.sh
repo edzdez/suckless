@@ -1,7 +1,7 @@
 #!/bin/bash
 
-dte=$(date +"%D")
-time=$(date +"%H:%M")
+dte=$(date +"%b %d")
+time=$(date +"%I:%M %p")
 
-echo "^c#b48ead^ $dte ^d^|^c#d8dee9^  $time"
+echo " $dte  $time"
 
