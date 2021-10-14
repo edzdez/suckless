@@ -1,7 +1,8 @@
 // Modify this file to change what commands output to your statusbar, and recompile using the make command.
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
-    {"^c#2e3440^^b#bf616a^  ", "/home/edzdez/suckless/dwmblocks/scripts/getkern.sh", 3600, 0},
+    /* {"^c#2e3440^^b#bf616a^  ", "/home/edzdez/suckless/dwmblocks/scripts/getkern.sh", 3600, 0}, */
+    {"^c#2e3440^^b#bf616a^  ", "/home/edzdez/suckless/dwmblocks/scripts/getkern.sh", 3600, 0},
     {"^c#2e3440^^b#d08770^  ", "/home/edzdez/suckless/dwmblocks/scripts/cpu.sh", 10, 0},
     {"^c#2e3440^^b#ebcb8b^  ", "/home/edzdez/suckless/dwmblocks/scripts/mem.sh", 10, 0},
     {"^c#2e3440^^b#a3be8c^ ", "/home/edzdez/suckless/dwmblocks/scripts/getbl.sh", 5, 1},
