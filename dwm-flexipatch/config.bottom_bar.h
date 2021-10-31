@@ -14,7 +14,8 @@ static const char autostartsh[] = "autostart.sh";
 static const char dwmdir[] = "dwm";
 static const char localshare[] = ".local/share";
 static const int showbar = 1;                 /* 0 means no bar */
-static const int topbar = 1;                  /* 0 means bottom bar */
+//static const int topbar = 1;                  /* 0 means bottom bar */
+static const int topbar = 0;                  /* 0 means bottom bar */
 static const int bar_height = 0;              /* 0 means derive from font, >= 1 explicit height */
 static const int vertpad = 6;                 /* vertical padding of bar */
 static const int sidepad = 6;                 /* horizontal padding of bar */
@@ -188,8 +189,7 @@ static const Layout layouts[] = {
     /* symbol     arrange function */
     {"[]=", tile}, /* first entry is default */
     {"><>", NULL}, /* no layout function means floating behavior */
-    {"[M]", monocle},
-    {"|M|", centeredmaster}, {NULL, NULL},
+    {"[M]", monocle}, {"|M|", centeredmaster}, {NULL, NULL},
 };
 
 /* key definitions */
@@ -213,7 +213,9 @@ static const Layout layouts[] = {
 /*                                  normfgcolor, "-sb", selbgcolor, "-sf", tagsselfgcolor,  topbar ? NULL : "-b", */
 /*                                  NULL}; */
 /* static const char *dmenucmd[] = {"dmenu_run", "-X", "6" , "-Y", "6", "-W", "1908", NULL}; */
-static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W 1908", "-term=alacritty",
+//static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W 1908", "-term=alacritty",
+//                                 "--no-generic", NULL};
+static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 1055 -W 1908", "-term=alacritty",
                                  "--no-generic", NULL};
 static const char *termcmd[] = {"alacritty", NULL};
 // static const char *termcmd[] = {"kitty", NULL};
@@ -254,9 +256,9 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_j, movestack, {.i = +1}},
     {MODKEY | ShiftMask, XK_k, movestack, {.i = -1}},
     //{MODKEY, XK_Return, zoom, {0}},
-    {MODKEY | Mod1Mask, XK_equal, incrgaps, {.i = +1}},
-    {MODKEY | Mod1Mask, XK_minus, incrgaps, {.i = -1}},
-    {MODKEY | Mod1Mask, XK_equal, defaultgaps, {6}},
+    {MODKEY | ShiftMask, XK_equal, incrgaps, {.i = +1}},
+    {MODKEY | ShiftMask, XK_minus, incrgaps, {.i = -1}},
+    {MODKEY, XK_equal, defaultgaps, {6}},
     {MODKEY, XK_Tab, view, {0}},
     {MODKEY, XK_F2, spawn, {.v = brightnessdowncmd}},
     {MODKEY, XK_F3, spawn, {.v = brightnessupcmd}},

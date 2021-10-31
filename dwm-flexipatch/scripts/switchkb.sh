@@ -9,3 +9,5 @@ else
     echo "us"
     setxkbmap -layout us
 fi
+
+setxkbmap -option caps:escape
