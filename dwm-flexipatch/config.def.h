@@ -218,7 +218,8 @@ static const char *dmenucmd[] = {"j4-dmenu-desktop", "--dmenu=dmenu -X 6 -Y 6 -W
 static const char *termcmd[] = {"alacritty", NULL};
 // static const char *termcmd[] = {"kitty", NULL};
 static const char *filecmd[] = {"nemo", NULL};
-static const char *webcmd[] = {"firefox", NULL};
+/* static const char *webcmd[] = {"firefox", NULL}; */
+static const char *webcmd[] = {"microsoft-edge-stable", NULL};
 
 static const char *roficmd[] = {"rofi", "-show", "drun"};
 
