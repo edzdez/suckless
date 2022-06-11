@@ -196,28 +196,37 @@ drawmenu(void)
 	drw_setscheme(drw, scheme[SchemeNorm]);
 	drw_rect(drw, 0, 0, mw, mh, 1, 1);
 
+    if (!topbar) {
+        y = bh * lines;
+    }
+
 	if (prompt && *prompt) {
 		drw_setscheme(drw, scheme[SchemeSel]);
-		x = drw_text(drw, x, 0, promptw, bh, lrpad / 2, prompt, 0
+		// x = drw_text(drw, x, 0, promptw, bh, lrpad / 2, prompt, 0
+		x = drw_text(drw, x, y, promptw, bh, lrpad / 2, prompt, 0
 		);
 	}
 	/* draw input field */
 	w = (lines > 0 || !matches) ? mw - x : inputw;
 
 	drw_setscheme(drw, scheme[SchemeNorm]);
-	drw_text(drw, x, 0, w, bh, lrpad / 2, text, 0
+	drw_text(drw, x, y, w, bh, lrpad / 2, text, 0
 	);
 
 	curpos = TEXTW(text) - TEXTW(&text[cursor]);
 	if ((curpos += lrpad / 2 - 1) < w) {
 		drw_setscheme(drw, scheme[SchemeNorm]);
-		drw_rect(drw, x + curpos, 2 + (bh-fh)/2, 2, fh - 4, 1, 0);
+        if (!topbar) {
+		    drw_rect(drw, x + curpos, y + 2 + (bh-fh)/2, 2, fh - 4, 1, 0);
+        } else {
+		    drw_rect(drw, x + curpos, 2 + (bh-fh)/2, 2, fh - 4, 1, 0);
+        }
 	}
 
 	if (lines > 0) {
 		/* draw vertical list */
 		for (item = curr; item != next; item = item->right)
-			drawitem(item, x, y += bh, mw - x);
+			drawitem(item, x, y -= bh, mw - x);
 	} else if (matches) {
 		/* draw horizontal list */
 		x += inputw;
