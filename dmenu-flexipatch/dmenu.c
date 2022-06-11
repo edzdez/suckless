@@ -477,10 +477,10 @@ keypress(XKeyEvent *ev)
 			goto draw;
 		case XK_g: ksym = XK_Home;  break;
 		case XK_G: ksym = XK_End;   break;
-		case XK_h: ksym = XK_Up;    break;
-		case XK_j: ksym = XK_Next;  break;
-		case XK_k: ksym = XK_Prior; break;
-		case XK_l: ksym = XK_Down;  break;
+		case XK_h: ksym = XK_Left;  break;
+		case XK_j: ksym = XK_Down;  break;
+		case XK_k: ksym = XK_Up;    break;
+		case XK_l: ksym = XK_Right; break;
 		default:
 			return;
 		}
@@ -543,10 +543,17 @@ insert:
 		/* fallthrough */
 	case XK_Up:
 	case XK_KP_Up:
-		if (sel && sel->left && (sel = sel->left)->right == curr) {
-			curr = prev;
-			calcoffsets();
-		}
+        if (topbar) {
+		    if (sel && sel->left && (sel = sel->left)->right == curr) {
+		    	curr = prev;
+		    	calcoffsets();
+		    }
+        } else {
+		    if (sel && sel->right && (sel = sel->right) == next) {
+		    	curr = next;
+		    	calcoffsets();
+		    }
+        }
 		break;
 	case XK_Next:
 	case XK_KP_Next:
@@ -583,10 +590,17 @@ insert:
 		/* fallthrough */
 	case XK_Down:
 	case XK_KP_Down:
-		if (sel && sel->right && (sel = sel->right) == next) {
-			curr = next;
-			calcoffsets();
-		}
+        if (topbar) {
+		    if (sel && sel->right && (sel = sel->right) == next) {
+		    	curr = next;
+		    	calcoffsets();
+		    }
+        } else {
+		    if (sel && sel->left && (sel = sel->left)->right == curr) {
+		    	curr = prev;
+		    	calcoffsets();
+		    }
+        }
 		break;
 	case XK_Tab:
 		if (!sel)
