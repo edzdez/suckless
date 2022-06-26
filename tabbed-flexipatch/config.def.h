@@ -4,10 +4,13 @@
 static char font[] = "Jetbrains Mono Nerd Font:size=10";
 static char *normbgcolor = "#1e1e2e";
 static char *normfgcolor = "#cdd6f4";
+static char *normulcolor = "#1e1e2e";
 static char *selbgcolor = "#45475a";
 static char *selfgcolor = "#cdd6f4";
+static char *selulcolor = "#45475a";
 static char *urgbgcolor = "#f9e2af";
 static char *urgfgcolor = "#1e1e2e";
+static char *urgulcolor = "#f9e2af";
 static const char before[] = "<";
 static const char after[] = ">";
 static const char titletrim[] = "...";

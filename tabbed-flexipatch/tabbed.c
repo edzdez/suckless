@@ -48,7 +48,7 @@
 #define CLEANMASK(mask)         (mask & ~(numlockmask | LockMask))
 #define TEXTW(x)                (textnw(x, strlen(x)) + dc.font.height)
 
-enum { ColFG, ColBG, ColLast };       /* color */
+enum { ColFG, ColBG, ColUL, ColLast };       /* color */
 enum {
 	WMProtocols,
 	WMDelete,
@@ -482,6 +482,10 @@ drawtext(const char *text, XftColor col[ColLast])
 	XFillRectangles(dpy, dc.drawable, dc.gc, &r, 1);
 	if (!text)
 		return;
+
+    XRectangle ul = { dc.x, dc.y, dc.w, 2};
+    XSetForeground(dpy, dc.gc, col[ColUL].pixel);
+    XFillRectangles(dpy, dc.drawable, dc.gc, &ul, 1);
 
 	olen = strlen(text);
 	h = dc.font.ascent + dc.font.descent;
@@ -1228,10 +1232,13 @@ setup(void)
 
 	dc.norm[ColBG] = getcolor(normbgcolor);
 	dc.norm[ColFG] = getcolor(normfgcolor);
+    dc.norm[ColUL] = getcolor(normulcolor);
 	dc.sel[ColBG] = getcolor(selbgcolor);
 	dc.sel[ColFG] = getcolor(selfgcolor);
+    dc.sel[ColUL] = getcolor(selulcolor);
 	dc.urg[ColBG] = getcolor(urgbgcolor);
 	dc.urg[ColFG] = getcolor(urgfgcolor);
+    dc.urg[ColUL] = getcolor(urgulcolor);
 	#if ALPHA_PATCH
 	XSetWindowAttributes attrs;
 	attrs.background_pixel = dc.norm[ColBG].pixel;
