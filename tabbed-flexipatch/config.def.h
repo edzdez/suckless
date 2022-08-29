@@ -2,15 +2,15 @@
 
 /* appearance */
 static char font[] = "Jetbrains Mono Nerd Font:size=10";
-static char *normbgcolor = "#1e1e2e";
-static char *normfgcolor = "#cdd6f4";
-static char *normulcolor = "#1e1e2e";
-static char *selbgcolor = "#45475a";
-static char *selfgcolor = "#cdd6f4";
-static char *selulcolor = "#45475a";
-static char *urgbgcolor = "#f9e2af";
-static char *urgfgcolor = "#1e1e2e";
-static char *urgulcolor = "#f9e2af";
+static char *normbgcolor = "#1d1f21";
+static char *normfgcolor = "#c5c8c6";
+static char *normulcolor = "#1d1f21";
+static char *selbgcolor = "#373b41";
+static char *selfgcolor = "#c5c8c6";
+static char *selulcolor = "#373b41";
+static char *urgbgcolor = "#f0c674";
+static char *urgfgcolor = "#1d1f21";
+static char *urgulcolor = "#f0c674";
 static const char before[] = "<";
 static const char after[] = ">";
 static const char titletrim[] = "...";
