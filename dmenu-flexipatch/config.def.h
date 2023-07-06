@@ -8,7 +8,8 @@ static int fuzzy = 1;   /* -F  option; if 0, dmenu doesn't use fuzzy matching */
 static const char *fonts[] = {"JetBrains Mono Nerd Font:size=11"};
 static const char *prompt = NULL; /* -p  option; prompt to the left of input field */
 
-static const unsigned int baralpha = 0xf0;
+// static const unsigned int baralpha = 0xf0;
+static const unsigned int baralpha = OPAQUE;
 static const unsigned int borderalpha = OPAQUE;
 static const unsigned int alphas[][3] = {
     /*               fg      bg        border     */
