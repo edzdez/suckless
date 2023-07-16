@@ -19,12 +19,11 @@ static const unsigned int alphas[][3] = {
 
 static const char *colors[][2] = {
     /*               fg         bg       */
-    [SchemeNorm] = {"#c5c6c8", "#1d1f21"},
-    //[SchemeSel] = {"#212121", "#89ddff"},
-    [SchemeSel] = {"#c5c6c8", "#373b41"},
-    [SchemeOut] = {"#c5c6c8", "#373b41"},
-    [SchemeSelHighlight] = {"#b5bd68", "#373b41"},
-    [SchemeNormHighlight] = {"#b5bd68", "#1d1f21"},
+    [SchemeNorm] = {"#ebdbb2", "#1d2021"},
+    [SchemeSel] = {"#ebdbb2", "#504945"},
+    [SchemeOut] = {"#ebdbb2", "#504945"},
+    [SchemeSelHighlight] = {"#b8bb26", "#504945"},
+    [SchemeNormHighlight] = {"#b8bb26", "#1d2021"},
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines = 0;
